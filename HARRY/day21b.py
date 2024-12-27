@@ -1,4 +1,4 @@
-def name(**name):
+def names(**name):
     print("Hello",name["fname"],name["mname"],name["lname"])
 
-name(fname="abhi",mname="shek",lname="rs")
+names(fname="abhi",mname="shek",lname="rs")
