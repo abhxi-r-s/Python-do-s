@@ -55,9 +55,11 @@ while(True):
         if choice==1:
             acc.display()
         elif choice==2:
-            acc.withdrawel()
+            amt=int(input("Enter the amount to withdraw :"))
+            acc.withdrawel(amt)
         elif choice==3:
-            acc.deposit()
+            amt=int(input("Enter the amount to deposit :"))
+            acc.deposit(amt)
         elif choice==4:
             acc.balance_check()
         elif choice==5:
@@ -68,9 +70,11 @@ while(True):
         if choice==1:
             acc2.display()
         elif choice==2:
-            acc2.withdrawel()
+            amt=int(input("Enter the amount to withdraw :"))
+            acc2.withdrawel(amt)
         elif choice==3:
-            acc2.deposit()
+            amt=int(input("Enter the amount to deposit :"))
+            acc2.deposit(amt)
         elif choice==4:
             acc2.balance_check()
         elif choice==5:
