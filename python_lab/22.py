@@ -4,6 +4,6 @@ for i in range(0,5):
     print("\n")
 
 for i in range(0,4):
-    for j in range(4,i-1,-1):
+    for j in range(3,i-1,-1):
         print("*",end=" ")
     print("\n")

@@ -1,32 +1,23 @@
-#25.	Time (Private attributes, Overloading)
-
-class Time:
+class time:
     def __init__(self,hour,minute,second):
-        self.hour = hour
-        self.minute = minute
-        self.second = second
-    def __add__(self,Time2):
-        second = (self.second + Time2.second)%60
-        minute = (self.second + Time2.second)//60 + (self.minute + Time2.minute)%60
-        hour = (self.minute + Time2.minute)//60 + self.hour + Time2.hour
-        sum=Time(hour,minute,second)
-        sum.get_time()
-       
-    def get_time(self):
-        print(f"{self.hour}:{self.minute}:{self.second} ")
-
-hour,minute,second=map(int,input("Enter the first time- Hour, Minute and Second ").split())
-T1=Time(hour,minute,second)
-hour,minute,second=map(int,input("Enter the second time- Hour, Minute and Second ").split())
-T2=Time(hour,minute,second)
-T1+T2
-
-
-    
-        
-    
-        
-        
-        
-        
-        
+        self.__hour=hour
+        self.__minute=minute
+        self.__second=second
+    def __add__(self,other):
+        h=self.__hour+other.__hour
+        m=self.__minute+other.__minute
+        s=self.__second+other.__second
+        if s>=60:
+            s=s%60
+            m=m+1
+        if m>=60:
+            m=m%60
+            h=h+1
+        if h>=24:
+            h=h%24          
+        print(f"{h}:{m}:{s}")
+hour,minute,second=map(int,input("Enter the first time :").split())
+t1=time(hour,minute,second)
+hour,minute,second=map(int,input("Enter the second time :").split())
+t2=time(hour,minute,second)
+t=t1+t2
