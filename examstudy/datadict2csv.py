@@ -26,3 +26,11 @@ for data in datadict:
 # print(valuestr)
 file.write(valuestr)
 file.close()
+
+file=open("dictresult.csv","r")
+rows=file.readlines()
+for row in rows:
+    data = row.split(",")
+    for d in data:
+        print(d, end=" ")
+file.close()
